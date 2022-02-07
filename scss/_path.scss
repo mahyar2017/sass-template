@@ -1,0 +1,30 @@
+
+
+//pathStyle
+.path{
+    @include flex(flex, space-between,null);
+    @include margin-padding(0,0 ,100px ,0 );
+
+    .right-side{
+        @include section-divider(flex, 50%, 50%);
+    }
+    .left-side{
+        @include section-divider(flex, 45%, 45%);
+        .path-title{
+            @include flex(flex, center, center);
+            flex-direction: column;
+            h2{
+                font-size: 26px;
+                margin-bottom: 34px;
+                color: #46484d;
+            }
+
+            p{
+                font-size: 18px;
+                line-height: 42px;
+                color: #868383;
+            }
+        }
+
+    }
+}

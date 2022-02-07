@@ -1,0 +1,55 @@
+//fonts
+@font-face {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url("#{$font-path}/iransans/eot/IRANSansWeb(FaNum).eot");
+    src: url("#{$font-path}/iransans/eot/IRANSansWeb(FaNum).eot?#iefix") format('embedded-opentype'),
+     url("#{$font-path}/iransans/woff2/IRANSansWeb(FaNum).woff2") format('woff2'),
+      url("#{$font-path}/iransans/woff/IRANSansWeb(FaNum).woff") format('woff'),
+       url("#{$font-path}/iransans/ttf/IRANSansWeb(FaNum).ttf") format('truetype')
+}
+
+
+//Global
+*{
+    font-family: $font-family;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font-family;
+    overflow-x: hidden;
+}
+
+ul,ol,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+
+//Public Styles
+.container{
+    max-width: 1170px;
+    margin: auto;
+    position: relative;
+}
+.row{
+    @include flex()
+}
+
+.img-fluid{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.mt-250{
+    margin-top: 200px;
+}

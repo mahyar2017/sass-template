@@ -1,0 +1,82 @@
+
+//topicStyle
+#topic{
+    .topic-title{
+        font-size: 26px;
+        @include margin-padding(0,0 ,30px ,0 ,true );
+        border-right: 5px solid red;
+        @include margin-padding(0,10px ,0 ,0 )
+        
+    }
+    .topic{
+        @include flex(flex,space-between, null);
+        @include margin-padding(0,0 ,20px ,0 ,true );
+    }
+    .card{
+        overflow: hidden;
+        @include section-divider(flex, 49%, 49%);
+        border: 1px solid #efefef;
+        @include border-radius(3px, 3px, 3px,3px);
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+
+        &:hover .topic-img::after{
+            opacity: 0.6;
+        }
+
+        .topic-img{
+            position: relative;
+            &:after{
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            }
+        }
+
+        .topic-detail{
+            position: relative;
+            @include section-divider(flex, 70%, 70%);
+            flex-direction: column;
+            @include margin-padding(22px,22px ,22px ,22px ,true );
+
+            &:after{
+                content: '';
+                width: 37px;
+                height: 148%;
+                background-color: #fff;
+                position: absolute;
+                top: -25px;
+                right: -43px;
+                transform: rotate(5deg);
+
+            }
+
+            a{
+                font-size: 18px;
+            }
+            meta{
+                font-size: 18px;
+                margin-top: 25px;
+                color: #ccc;
+                span{
+                    margin-left: 16px;
+                }
+            }
+
+            p{
+                font-size: 14px;
+                margin-top: 20px;
+                line-height: 30px;
+                color: #757575;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,101 @@
+//courseStyle
+#course{
+    position: relative;
+    .pipe{
+        width: 1335px;
+        height: 340px;
+        top: 83px;
+        left: -89px;
+        position: absolute;
+        background: rgba(140, 124, 229, .08);
+        @include border-radius(0, 250px, 250px, 0);
+
+    }
+    .row{
+        .course{
+            flex-direction: column;
+            @include section-divider(flex, 30%, 30%);
+            background-color: white;
+            position: relative;
+            border-bottom: 4px solid red;
+            @include border-radius(0, 0, 5px, 5px);
+            cursor: pointer;
+            @include margin-padding(0,16px ,0 , 16px,true );
+            transition: box-shadow 0.5s ease;
+            &:hover{
+                box-shadow: 0 0 13px 0 rgba(95 , 95,95,0.5);
+            }
+            &:hover .teacher{
+                top: -54px;
+            }
+            &:hover .teacher-name{
+                width: 200px;
+                right: 60px;
+            }
+            
+
+            .status{
+                position: absolute;
+                font-size: 12px;
+                left: 10px;
+                top: 10px;
+                background-color: rgb(54,114,228);
+                color: white;
+                @include margin-padding(2px,6px ,2px ,6px ,true );
+                @include border-radius(2px, 2px, 2px, 2px);
+            }
+
+            .teacher{
+                position: absolute;
+                top: -34px;
+                right: 9px;
+                width: 54px;
+                z-index: -1;
+                transition: top 1s ease;
+            }
+            .teacher-name{ 
+                position: absolute;
+                top: -30px;
+                right: 9px;
+                font-size: 13px;
+                z-index: -2;
+                width: 0;
+                overflow: hidden;
+                white-space: nowrap;  
+                transition: all 1s ease
+            }
+            .thumb{
+                height: 250px !important;
+            }
+            a{
+                @include margin-padding(10px,10px ,10px ,10px ,true );
+                font-size: 18px;
+                color: #313131;
+            }
+            .meta{
+                font-size: 14px;
+                @include margin-padding(0,10px ,0 ,10px ,true );
+                @include margin-padding(16px,0 ,12px ,0  );
+
+                span:nth-child(1){
+                    @include margin-padding(0,0 ,0 ,auto ,true );
+
+                    i{
+                        color: #45a1ff;
+                        @include margin-padding(0,0 ,0 ,3px ,true );
+                    }
+                }
+
+                span:nth-child(2){
+                    @include margin-padding(0,220px ,0 ,0 ,true );
+
+                    i{
+                        color: #37b537;
+                        text-shadow: 0 0 2px rgba(0,0,0,.5);
+                    }
+                }
+
+            }
+        }
+    }
+}
